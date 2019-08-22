@@ -14,8 +14,11 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpModule } from '@angular/http'
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { NgCalendarModule } from 'ionic2-calendar';
+import { Geolocation } from '@ionic-native/geolocation/ngx';
 
 import { ContactsModalPageModule } from './contacts-modal/contacts-modal.module';
+import { NativeGeocoder } from '@ionic-native/native-geocoder/ngx';
 
 @NgModule({
   declarations: [AppComponent],
@@ -25,6 +28,7 @@ import { ContactsModalPageModule } from './contacts-modal/contacts-modal.module'
             AppRoutingModule,
             HttpModule,
             ContactsModalPageModule,
+            NgCalendarModule,
             ActivitiesModalPageModule,
             AccountsModalPageModule,
             ProjectsModalPageModule,
@@ -33,6 +37,8 @@ import { ContactsModalPageModule } from './contacts-modal/contacts-modal.module'
   providers: [
     StatusBar,
     SplashScreen,
+    NativeGeocoder,
+    Geolocation,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

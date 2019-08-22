@@ -16,6 +16,8 @@ const routes: Routes = [
   { path: 'projects', loadChildren: './projects/projects.module#ProjectsPageModule' },
   { path: 'tools-modal', loadChildren: './tools-modal/tools-modal.module#ToolsModalPageModule' },
   { path: 'tools', loadChildren: './tools/tools.module#ToolsPageModule' },
+  { path: 'calendar', loadChildren: './calendar/calendar.module#CalendarPageModule' },
+  { path: 'geo', loadChildren: './geo/geo.module#GeoPageModule' },
 ];
 
 @NgModule({

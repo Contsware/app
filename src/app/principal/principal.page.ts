@@ -24,6 +24,12 @@ export class PrincipalPage implements OnInit {
   redirectToProjects(){
     this.router.navigate(['projects'], {queryParams :this.user});
   }
+  redirectToCalendar(){
+    this.router.navigate(['calendar'], {queryParams :this.user});
+  }
+  redirectToGeo(){
+    this.router.navigate(['geo'], {queryParams :this.user});
+  }
   ngOnInit() {
   }
 
